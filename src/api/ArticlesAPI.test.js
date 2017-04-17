@@ -31,7 +31,7 @@ it('calls ArticlesAPI.fetchArticles()', (done) => {
 });
 
 it('calls ArticlesAPI.fetchArticlesBySection(\'opinion\')', (done) => {
-  fetchMock.get('http://localhost:3001/api/articles?{"where":{"section":"opinion"}}', {success: true});
+  fetchMock.get('http://localhost:3001/api/articles?filter={"where":{"section":"opinion"}}', {success: true});
   return ArticlesAPI.fetchArticlesBySection('opinion')
     .then((json) => {
       expect(json.success).toEqual(true);
