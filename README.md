@@ -62,19 +62,19 @@ The functions are:
 
 Example usages of ArticleAPI.js (once you complete the functionality described above) are:
 
-```ArticleAPI.fetchArticleByID(1).then(function(article) {
-  console.log(article.title) // will print out "Going Home to Falluja, a City Slipping Back Into Turmoil"
-  console.log(article.byline) // will print out "By DAVID ZUCCHINO"
-});```
+    ArticleAPI.fetchArticleByID(1).then(function(article) {
+      console.log(article.title) // will print out "Going Home to Falluja, a City Slipping Back Into Turmoil"
+      console.log(article.byline) // will print out "By DAVID ZUCCHINO"
+    });
 
-```ArticleAPI.fetchArticles().then(function(articles) {
-  console.log(articles.length) // will print out 40
-  console.log(articles[0].title) // will print out "Going Home to Falluja, a City Slipping Back Into Turmoil"
-});```
+    ArticleAPI.fetchArticles().then(function(articles) {
+      console.log(articles.length) // will print out 40
+      console.log(articles[0].title) // will print out "Going Home to Falluja, a City Slipping Back Into Turmoil"
+    });
 
-```ArticleAPI.fetchArticlesBySection('opinion').then(function(articles) {
-  console.log(articles[0].title) // will print out "French Farmer Who Aided Migrants Is Given Suspended Fine"
-});```
+    ArticleAPI.fetchArticlesBySection('opinion').then(function(articles) {
+      console.log(articles[0].title) // will print out "French Farmer Who Aided Migrants Is Given Suspended Fine"
+    });
 
 A Unit Test that asserts this functionality can be found alongside ArticleAPI.js - it's named ArticleAPI.test.js.  
 
