@@ -137,7 +137,7 @@ Instead, we can just utilize React Router's `<Link>` component in ArticleTeaser.
 
 **Refactoring Success Criteria:**  Unit tests have already been reconfigured to account for these changes.  Once you've completed them successfully, all unit tests should pass.  In addition, ensure that no ESLint warnings appear in your browser console (they will appear with a yellow background). 
 
-##Updates
+## Updates
 
 1) If you're getting an error running ```npm run test```, run ```brew install watchman```.  
 2) There was a small bug in src/api/ArticlesAPI.test.js.  This file has been updated in this repo.  If you've already forked this repo, you can simply copy this file from this repo and overwrite the version in your fork.
@@ -151,3 +151,4 @@ const foo = () => {
 
 foo().then((json) => console.log(json))
 ```
+4) In the information provided above about how to construct a API 'filter', the filter object that's created is a JavaScript.  When you make a request and want to include this object, you would need to convert it into a string.  JavaScript objects can be converted into strings using [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
