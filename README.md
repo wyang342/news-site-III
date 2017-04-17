@@ -136,3 +136,18 @@ At the moment, we're passing down a callback function from HomePage.js to Articl
 Instead, we can just utilize React Router's `<Link>` component in ArticleTeaser.js.  Using this, we can remove the callback function that's set in HomePage.js and passed down to ArticleList.js - remove these.
 
 **Refactoring Success Criteria:**  Unit tests have already been reconfigured to account for these changes.  Once you've completed them successfully, all unit tests should pass.  In addition, ensure that no ESLint warnings appear in your browser console (they will appear with a yellow background). 
+
+##Updates
+
+1) If you're getting an error running ```npm run test```, run ```brew install watchman```.  
+2) There was a small bug in src/api/ArticlesAPI.test.js.  This file has been updated in this repo.  If you've already forked this repo, you can simply copy this file from this repo and overwrite the version in your fork.
+3) The functions in ArticlesAPI.js should return a value (a Promise, specifically).  An example of this could look something like this:
+
+```
+const foo = () => {
+  return fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then((response) => response.json())
+}
+
+foo().then((json) => console.log(json))
+```
