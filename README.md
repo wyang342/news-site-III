@@ -116,3 +116,23 @@ Calling this.setState triggers the rendering process - at this point, render() i
 You will want to follow this pattern within src/pages/HomePage.js and src/pages/ArticlePage.js and remove references in these files to src/data/news.json
 
 **Success Criteria:**  HomePage.js and ArticlePage.js should utilize the ArticleAPI.js module to fetch data from the Article API, and then display that data.
+
+## Refactoring!
+
+Programming is iterative - changes happen.  Ways to simplify our app have been idenfified, and it is up to you to implement these changes.
+
+**Nav Component & Section Data**
+
+At the moment, the data that determines what appears in the main navigation is contained with App.js's state.  Your product managers have decided that the news sections that we present on the site will never change - that said, we can remove this data from App.js's state, move the data into a JSON file in our codebase, and import it directly into Nav.js.
+
+The JSON file has already been created - src/config/sections.json.  
+
+ 1. Import src/config/sections.json into Nav.js and use it to construct the navigation, and remove 
+ 2. The navItems object in App.js's state is no longer needed, and that's the only piece of data in state.  That said, we can remove App.js's constructor entirely.
+
+**ArticleTeaser Link**
+At the moment, we're passing down a callback function from HomePage.js to ArticleList.js to ArticleTeaser.js that handles redirection when the title in ArticleTeaser is clicked.  This logic was overly and unnecessarily complicated.  
+
+Instead, we can just utilize React Router's `<Link>` component in ArticleTeaser.js.  Using this, we can remove the callback function that's set in HomePage.js and passed down to ArticleList.js - remove these.
+
+**Refactoring Success Criteria:**  Unit tests have already been reconfigured to account for these changes.  Once you've completed them successfully, all unit tests should pass.  In addition, ensure that no ESLint warnings appear in your browser console (they will appear with a yellow background). 
