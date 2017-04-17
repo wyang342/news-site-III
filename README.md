@@ -20,7 +20,7 @@ You will want to copy over the work you've done in the two previous News Site ch
 
 Once you've copied over these files, run ```npm run start``` - verify that no errors appear in your browser console or terminal, and that your app functions the same as it did in the last challenge.
 
-##The News/Article API
+## The News/Article API
 So far, the data that drives our News Site has been contained within a static JSON file - ./src/data/news.json.  We will now begin connecting our front-end to an API/web service that provides news data.  This API is included in this codebase.  When you run ```npm run start```, the React development environment will function as usual - this web service will also boot up, though.  For today, there are two endpoints you will use:
 
 **http://localhost:3001/api/articles**
@@ -43,14 +43,14 @@ A true example of the filter object would look like this:
   }
 }
 ```
-The URL to the API that corresponds to the example above would look like this:  [http://localhost:3001/api/articles/?filter={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}}](http://localhost:3001/api/articles/?filter={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}})
+The URL to the API that corresponds to the example above would look like this: [http://localhost:3001/api/articles/?filter={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}}](http://localhost:3001/api/articles/?filter={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}})
 
 ----------
 **[http://localhost:3001/api/articles/[articleID]](http://localhost:3001/api/articles/1)**
 
 Individual Article objects can be retrieved with the URL above.  The Article ID is a number, an corresponds to the unique index of the article as it exists in the database.  
 
-##src/api/ArticleAPI.js
+## src/api/ArticleAPI.js
 
 The ArticleAPI.js JavaScript module's primary function is to handle making requests to the API described in the previous section.  This module already contains a few functions that are stubbed out - you must complete them.
 
@@ -82,7 +82,7 @@ A Unit Test that asserts this functionality can be found alongside ArticleAPI.js
 
 Note:  Other tests may currently be failing - you can ignore these for now.  After running ```npm run test```, you can have the test runner ignore these files, also.  Use the 'p' option to filter tests by a regex pattern - enter ArticleAPI.
 
-##Integrating ArticleAPI.js into your App
+## Integrating ArticleAPI.js into your App
 
 At the moment, there are two components that use Article data - src/pages/HomePage and src/pages/ArticlePage.  In these components, we're importing the src/data/news.json (which contains an array of Articles) and either passing it down directly (in the case of HomePage.js) or taking an Article out of the array and passing it down (in the case of ArticlePage.js).  Let's modify these pages to use data from the API instead.  
 
