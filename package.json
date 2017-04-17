@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "compression": "^1.0.3",
+    "concurrently": "^3.4.0",
     "cors": "^2.5.2",
     "enzyme": "^2.8.1",
     "fetch-mock": "^5.10.0",
