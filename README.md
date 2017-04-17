@@ -63,9 +63,9 @@ The functions are:
 Example usages of ArticleAPI.js (once you complete the functionality described above) are:
 
     ArticleAPI.fetchArticleByID(1).then(function(article) {
-          console.log(article.title) // will print out "Going Home to Falluja, a City Slipping Back Into Turmoil"
-          console.log(article.byline) // will print out "By DAVID ZUCCHINO"
-        });
+      console.log(article.title) // will print out "Going Home to Falluja, a City Slipping Back Into Turmoil"
+      console.log(article.byline) // will print out "By DAVID ZUCCHINO"
+    });
 
     ArticleAPI.fetchArticles().then(function(articles) {
       console.log(articles.length) // will print out 40
