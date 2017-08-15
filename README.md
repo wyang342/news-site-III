@@ -14,7 +14,7 @@ You will want to copy over the work you've done in the two previous News Site ch
  - src/components/Article/Article.js
  - src/components/ArticleList/ArticleList.js
  - src/components/ArticleTeaser/ArticleTeaser.js
- - src/components/Nav/Nav.js
+ - src/components/AppNav/AppNav.js
  - src/pages/HomePage.js
  - src/pages/ArticlePage.js
 
