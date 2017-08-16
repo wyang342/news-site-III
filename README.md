@@ -27,7 +27,7 @@ So far, the data that drives our News Site has been contained within a static JS
   
   This endpoint returns a list of articles. Articles can be filtered by any property through a request parameter called "filter". The value of the filter request parameter should be set to a JSON string that resembles the following (where [filteredkey] is the key you want to filter an article object by, and [filteredvalue] is the corresponding value:
 
-    ```json
+    ```
     {
       "where": {
         "[filteredkey]": "[filteredvalue]"
