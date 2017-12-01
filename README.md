@@ -27,25 +27,25 @@ So far, the data that drives our News Site has been contained within a static JS
   
   This endpoint returns a list of articles. Articles can be filtered by any property through a request parameter called "filter". The value of the filter request parameter should be set to a JSON string that resembles the following (where [filteredkey] is the key you want to filter an article object by, and [filteredvalue] is the corresponding value:
 
-    ```
-    {
-      "where": {
-        "[filteredkey]": "[filteredvalue]"
-      }
-    }
-    ```
+```javascript
+{
+  "where": {
+    "[filteredkey]": "[filteredvalue]"
+  }
+}
+```
 
-  A true example of the filter object would look like this:
+A true example of the filter object would look like this:
 
-    ```
-    {
-      "where": {
-        "byline": "By DAVID ZUCCHINO"
-      }
-    }
-    ```
-  The URL to the API that corresponds to the example above would look like this: 
-  `http://localhost:3001/api/articles?filter={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}}`
+```javascript
+{
+  "where": {
+    "byline": "By DAVID ZUCCHINO"
+  }
+}
+```
+
+The URL to the API that corresponds to the example above would look like this: `http://localhost:3001/api/articles?filter={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}}`
 
 2. **[http://localhost:3001/api/articles/[articleID]](http://localhost:3001/api/articles/1)**
 
