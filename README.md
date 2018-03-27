@@ -4,7 +4,7 @@
 
  1. Create a JavaScript module that handles retrieving article data from an API using [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
  2. Integrate the module above into the News Site app.
- 3. Slightly refactor the Nav & ArticleDetails components 
+ 3. Slightly refactor the AppNav & ArticleDetails components 
 
 ## Initial Setup
 
@@ -129,7 +129,7 @@ Programming is iterative - changes happen.  Ways to simplify our app have been i
 
 **AppNav Component & Section Data**
 
-At the moment, the data that determines what appears in the main navigation is contained with App.js's state.  Your product managers have decided that the news sections that we present on the site will never change - that said, we can remove this data from `App.js`'s state, move the data into a JSON file in our codebase, and import it directly into `Nav.js`.
+At the moment, the data that determines what appears in the main navigation is contained with App.js's state.  Your product managers have decided that the news sections that we present on the site will never change - that said, we can remove this data from `App.js`'s state, move the data into a JSON file in our codebase, and import it directly into `AppNav.js`.
 
 The JSON file has already been created - `src/config/sections.json`.
 
