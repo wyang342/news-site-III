@@ -45,7 +45,7 @@ A true example of the filter object would look like this:
 }
 ```
 
-The URL to the API that corresponds to the example above would look like this: `http://localhost:3001/api/articles?filters={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}}`
+The URL to the API that corresponds to the example above would look like this: `http://localhost:3001/api/articles?filter={%22where%22:{%22byline%22:%22By%20ALISON%20SMALE%22}}`
 
 2. **[http://localhost:3001/api/articles/[articleID]](http://localhost:3001/api/articles/1)**
 
