@@ -21,5 +21,5 @@ it('renders without crashing', () => {
 it('renders navItems', () => {
   const component = mount(<MemoryRouter><AppNav /></MemoryRouter>);
   expect(component.find('nav').length).toEqual(1);
-  expect(component.find('a').length).toEqual(5);
+  expect(component.find('a').length).toEqual(4);
 });
