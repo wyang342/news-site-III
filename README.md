@@ -46,7 +46,7 @@ So far, the data that drives our News Site has been contained within a static JS
     }
     ```
 
-    The URL to the API that corresponds to the example above would look like this: `http://localhost:3001/api/articles?filter={"where":{"byline":"${byline}"}}`
+    The URL to the API that corresponds to the example above would look like this: `http://localhost:3001/api/articles?filter={"where":{"byline":"By DAVID ZUCCHINO"}}`
 
 2. **[http://localhost:3001/api/articles/[articleID]](http://localhost:3001/api/articles/1)**
 
