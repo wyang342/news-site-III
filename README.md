@@ -102,7 +102,7 @@ Note:  Other tests may currently be failing - you can ignore these for now.  Aft
 ## Integrating ArticleAPI.js into your App
 At the moment, there are two components that use Article data:
 - `src/pages/HomePage`
-- `src/pages/ArticlePage`.=
+- `src/pages/ArticlePage`
 
 In these components, we're importing the `src/data/news.json` (which contains an array of Articles) and either passing it down directly (in the case of `HomePage.js`) or taking an Article out of the array and passing it down (in the case of `ArticlePage.js`).  Let's modify these pages to use data from the API instead.
 
