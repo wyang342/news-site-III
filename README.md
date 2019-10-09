@@ -72,11 +72,11 @@ Here's an example of fetch:
 function getMovies() {
   fetch('http://example.com/movies.json') // make a request this URL. this returns a Promise object.
     .then(function(response) { // THEN once that's done, take the response, save it as "response" and turn it into JSON
-      return response.json();
+      return response.json()
     })
     .then(function(myJson) { // THEN once that's done, take the JSON you generated, save it as "myJson" and return it
-      return myJson;
-    });
+      return myJson
+    })
 }
 ```
 `.then` is a big pain because of an issue called callback hell. This is where the Javascript maintainers created `async/await`. Here's that same code as above, but using `async/await`:
@@ -84,9 +84,9 @@ function getMovies() {
 ```javascript
 async function getMovies() 
 {
-  let response = await fetch('http://example.com/movies.json');
+  let response = await fetch('http://example.com/movies.json')
   let data = await response.json()
-  return data;
+  return data
 }
 ```
 Here, we are declaring `getMovies` as an asynchronous function. When it's called, it `await`'s the completion of the `fetch` request and saves the result to `response`. 
