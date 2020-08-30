@@ -18,7 +18,7 @@ Again you have a choice to either use the solution code provided in this repo or
  - src/pages/HomePage.js
  - src/pages/ArticlePage.js
 
-Once you've copied over these files, run ```npm run start``` - verify that no errors appear in your browser console or terminal, and that your app functions the same as it did in the last challenge.
+Once you've copied over these files, run ```npm install``` and then ```npm run start``` - verify that no errors appear in your browser console or terminal, and that your app functions the same as it did in the last challenge.
 
 ## The News/Article API
 So far, the data that drives our News Site has been contained within a static JSON file - `./src/data/news.json`.  We will now begin connecting our front-end to an API/web service that provides news data.  This API is included in this codebase.  When you run ```npm run start```, the React development environment will function as usual. But, we also get a separate web service running on port 3001. For today, there are two endpoints you will use:
