@@ -3,7 +3,7 @@
 ## High Level Objectives
 
   1. Create a JavaScript module that handles retrieving article data from an API using [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
-  2. Integrate the module above into the News Site app.
+  2. Integrate the module above into the News Site app using React Component LifeCycle Methods and the `useEffect()` hook.
   3. Slightly refactor the AppNav & ArticleDetails components
 
 ## Initial Setup
