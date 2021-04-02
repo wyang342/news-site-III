@@ -61,7 +61,7 @@ The functions are:
 - `fetchArticlesBySection(section)` - returns a list of articles whose `section` attribute matches the section argument.
 - `fetchArticles(filters)` - returns a list of articles. The filters argument is optional - if no filters are provided, an array of all the articles are returned. If filters are provided, an array of Articles that meet the criteria are returned.
 
-For this, we want you use the concept of [fetch and async/await](https://dev.to/kishore007k/using-fetch-with-async-await-54od). Here's a basic summary:
+For this, we want you use the concept of [fetch and async/await](https://betterprogramming.pub/promises-with-async-await-605645a6c0e8). Here's a basic summary:
 - To make API calls to outside resources within your React app, you have to make `fetch` requests
 - `fetch` is inheritantly asynchronous (i.e., not synchronous / happening out of order)
 - `fetch` returns a Javascript `Promise` object. These `Promise` objects are basically Javascript's immediate response to you, saying "Hey I have received your request. I `Promise` to respond when I can."
