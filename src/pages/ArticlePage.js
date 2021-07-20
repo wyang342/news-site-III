@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
-import Article from '../components/Article/Article.js'
-import News from '../data/news.json';
+import React, { Component, useEffect, useState } from 'react';
+import Article from '../components/Article/Article.js';
+import { fetchArticleByID } from '../api/ArticlesAPI';
 
-class ArticlePage extends Component {
-  render() {
-    const articleIndex = this.props.match.params.articleID - 1;
-    const article = News[articleIndex];
-    const image = article.multimedia.length ? article.multimedia[2].url : null;
+
+function ArticlePage(props) {
+    const [article, setArticle] = useState(null);
+
+    useEffect(() => {
+        const fetchArticleAsync = async () => {
+            const articleID = props.match.params.articleID;
+            const article = await fetchArticleByID(articleID);
+            setArticle(article);
+        }
+
+        if (!article) {
+            fetchArticleAsync();
+        }
+    }, [article]);
 
     return (
-      <div>
-        {article ? <Article {...article } image={ image } /> :
-          <span>404: Article Not Found</span>
-        }
-      </div>
-    );
-  }
+        <div>
+            {article ? <Article {...article} /> : <span>404: Article Not Found</span>}
+        </div>
+    )
 }
 
 export default ArticlePage;

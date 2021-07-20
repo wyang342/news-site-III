@@ -1,16 +1,26 @@
-import React, { Component } from 'react';
-import ArticleList from '../components/ArticleList/ArticleList.js'
-import News from '../data/news.json';
+import React, { Component, useEffect, useState } from 'react';
+import ArticleList from '../components/ArticleList/ArticleList.js';
+import { fetchArticles } from '../api/ArticlesAPI';
 
-class HomePage extends Component {
-  render() {
+function HomePage(props) {
+    const [articles, setArticles] = useState([]);
+
+    useEffect(() => {
+        const fetchArticlesAsync = async () => {
+            const articlesResponse = await fetchArticles();  // needs to be await b/c altho fetchArticles() is async in its definition, we don't know that in HomePage.js
+            setArticles(articlesResponse);
+        }
+
+        if (articles.length === 0) {
+            fetchArticlesAsync();
+        }
+    }, [articles]);
+
     return (
-      <div>
-        <ArticleList articles={News}
-          handleTitleClick={(articleID) => this.props.history.push(`/articles/${articleID}`) } />
-      </div>
-    );
-  }
+        <div>
+            <ArticleList articles={articles} />
+        </div>
+    )
 }
 
 export default HomePage;
